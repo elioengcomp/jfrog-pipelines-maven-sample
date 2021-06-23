@@ -1,4 +1,5 @@
 gitProvider: my_github
 artifactory: my_artifactory
 repoPath: elioengcomp/jfrog-pipelines-maven-sample
-deployerRepo: my-libs-release-local
+snapshotRepo: my-libs-snapshot
+releaseRepo: my-libs-release
