@@ -24,5 +24,7 @@ pipelines:
           autoPublishBuildInfo: true
           inputResources:
             - name: mvn_repo
+          outputResources:
+            - name: mvn_build_info
           integrations:
             - name: {{ .Values.artifactory }}
