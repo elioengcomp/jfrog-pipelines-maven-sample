@@ -21,16 +21,8 @@ pipelines:
         configuration:
           deployerSnapshotRepo: {{ .Values.deployerRepo }}
           deployerReleaseRepo: {{ .Values.deployerRepo }}
+          autoPublishBuildInfo: true
           inputResources:
             - name: mvn_repo
           integrations:
             - name: {{ .Values.artifactory }}
-
-      - name: publish_build
-        type: PublishBuildInfo
-        configuration:
-          forceXrayScan: false
-          inputSteps:
-            - name: mvn_build_step
-          outputResources:
-            - name: mvn_build_info
